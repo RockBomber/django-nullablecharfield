@@ -16,7 +16,7 @@ class CharNullField(CharField):
     def to_python(self, value):
         if value is None:
             return None
-        return smart_str(value)
+        return value
 
     def get_db_prep_value(self, value):
         return value
